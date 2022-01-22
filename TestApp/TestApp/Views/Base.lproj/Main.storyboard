@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1dr-W7-42G">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Up2-Bw-4aL">
+                                <rect key="frame" x="30" y="121" width="330" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lN-IN-keI">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rVz-PI-5Db"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.81971343780000006" green="0.2302019512" blue="0.13780175489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Weekday Finder">
+                                            <fontDescription key="titleFontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                            <color key="baseBackgroundColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="r6k-Dc-EgI" kind="show" id="Wo0-Wg-tIY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaI-5r-WD6">
+                                        <rect key="frame" x="0.0" y="110" width="330" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="T - Converter">
+                                            <fontDescription key="titleFontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                            <color key="baseBackgroundColor" red="0.390179952" green="0.390179952" blue="0.390179952" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="5yM-MF-aYO" kind="show" id="hzf-ie-88k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-Gc-R0j">
+                                        <rect key="frame" x="0.0" y="220" width="330" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Pass Data">
+                                            <fontDescription key="titleFontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                            <color key="baseBackgroundColor" red="0.390179952" green="0.390179952" blue="0.390179952" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="oSb-zF-1eh" kind="show" id="QMR-BC-y8Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3lN-IN-keI" firstAttribute="height" secondItem="uaI-5r-WD6" secondAttribute="height" id="mBF-T3-KCu"/>
+                                    <constraint firstItem="uaI-5r-WD6" firstAttribute="height" secondItem="ZDL-Gc-R0j" secondAttribute="height" id="xFY-m3-jXA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Up2-Bw-4aL" secondAttribute="trailing" constant="30" id="OIL-TV-1Er"/>
+                            <constraint firstItem="Up2-Bw-4aL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="RZh-Km-p2X"/>
+                            <constraint firstItem="Up2-Bw-4aL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="uS8-8X-zT9"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sQO-mg-aAz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="947.69230769230762" y="67.535545023696685"/>
+        </scene>
+        <!--weekdayFinder-->
+        <scene sceneID="bqf-GU-Iyd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WeekdayFinder" referencedIdentifier="weekdayFinder" id="r6k-Dc-EgI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uaN-tu-XnK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPU-Cb-siD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1622" y="-129"/>
+        </scene>
+        <!--TConverter-->
+        <scene sceneID="UAa-X0-D3N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TConverter" id="5yM-MF-aYO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iPP-9f-nYg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wkw-Ou-hxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="-51"/>
+        </scene>
+        <!--PassData-->
+        <scene sceneID="30g-Vr-EbH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PassData" id="oSb-zF-1eh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nvp-BF-hfv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V25-aF-bcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595" y="29"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wgs-98-lro">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1dr-W7-42G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yx6-Cp-2om">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4RY-aw-AqJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UFW-8J-0fx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="68"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

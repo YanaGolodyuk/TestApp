@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Converter-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TConverter" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="desert" translatesAutoresizingMaskIntoConstraints="NO" id="2Bc-lY-CGQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="5t9-9m-v23">
+                                <rect key="frame" x="32" y="359" width="350" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0° C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytE-Gb-K9x">
+                                        <rect key="frame" x="152.5" y="0.0" width="45" height="29"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                        <color key="textColor" red="0.59676912609999999" green="0.25697353989999999" blue="0.1328875102" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3SX-Pg-4wo">
+                                        <rect key="frame" x="-2" y="79" width="354" height="31"/>
+                                        <color key="tintColor" red="0.27349013570000003" green="0.15377460549999999" blue="0.093664658900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="hvt-LI-rzW"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="temSliderChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="oxR-4T-h39"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32° F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvj-Lj-bKy">
+                                        <rect key="frame" x="145.5" y="159" width="59" height="29"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                        <color key="textColor" red="0.59676912609999999" green="0.25697353989999999" blue="0.1328875102" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T - Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsA-qU-kzc">
+                                <rect key="frame" x="60" y="95" width="294" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="35"/>
+                                <color key="textColor" red="0.27349013570000003" green="0.15377460549999999" blue="0.093664658900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="IsA-qU-kzc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="51" id="RGQ-5I-kXv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IsA-qU-kzc" secondAttribute="trailing" constant="60" id="ReT-wJ-kNB"/>
+                            <constraint firstItem="5t9-9m-v23" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="Rti-xw-suu"/>
+                            <constraint firstItem="5t9-9m-v23" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="eA9-Ig-l0v"/>
+                            <constraint firstItem="5t9-9m-v23" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.845411" id="nZ9-IV-JIo"/>
+                            <constraint firstItem="IsA-qU-kzc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="yvF-7g-uJf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="ytE-Gb-K9x" id="pQt-kC-LP5"/>
+                        <outlet property="fahrenheitLabel" destination="uvj-Lj-bKy" id="gpx-mX-KYy"/>
+                        <outlet property="tempSlider" destination="3SX-Pg-4wo" id="33w-pv-b4v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="desert" width="529" height="870"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
